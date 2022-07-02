@@ -1,0 +1,47 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Swag_App.SwaggPage"  Title="{Binding Name}">
+
+    <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+        
+        <Label Text="Name" />
+        <Entry Text="{Binding Name}" />
+
+        <Picker Title="Gender">
+            <Picker.Items>
+                <x:String>Female</x:String>
+                <x:String>Male</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <DatePicker Date="{Binding dateoforder}"
+                        x:Name="DateOfOrder"/>
+
+        <Picker Title="T-shirt Size">
+            <Picker.Items>
+                <x:String>S</x:String>
+                <x:String>M</x:String>
+                <x:String>L</x:String>
+                <x:String>XL</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="T-Shirt color" />
+        <Entry Text="{Binding T-ShirtColor}" />
+
+        <Label Text="Done" />
+        <Switch IsToggled="{Binding Done }" />
+        
+        <Button Text="Save"
+                Clicked="OnSaveClicked" />
+
+
+        <Button x:Name="OrderItemsButton" Text="Order Items"
+                Clicked="OrderItemsButton_Clicked" />
+
+
+
+    </StackLayout>
+</ContentPage>
+    
+    
